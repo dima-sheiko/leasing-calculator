@@ -13,4 +13,18 @@ body {
     'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 }
 
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
 
+.container {
+  width: 1440px;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 47px;
+}
