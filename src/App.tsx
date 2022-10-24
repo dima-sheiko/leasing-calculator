@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from './components/Button/Button';
 import { Header } from './components/Header/Header';
 import { Input } from './components/Input/Input';
@@ -10,7 +10,7 @@ export const App = () => {
     <div className='wrapper'>
       <main className='container'>
         <div className='header-box'>
-          <Header />
+          <Header>Calculate the cost of a car lease</Header>
         </div>
         <div className='inputs-box'>
           <Input />

@@ -1,7 +1,11 @@
-import React from 'react'
+import styles from './Header.module.css'
 
-export const Header = () => {
-  return (
-    <div>Header</div>
-  )
-}
+// Types
+type HeaderProps = {
+  children: string;
+};
+
+// Logic
+export const Header = ({ children }: HeaderProps) => {
+  return <header className={styles.header}>{children}</header>;
+};
