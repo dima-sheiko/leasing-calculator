@@ -1,7 +1,15 @@
-import React from 'react'
+// Types
+type ResultsProps = {
+  label: string;
+  result: number;
+};
 
-export const Results = () => {
+// Logic
+export const Results = ({ label, result }: ResultsProps) => {
   return (
-    <div>Results</div>
-  )
-}
+    <div>
+      <p>{label}</p>
+      <p>{result}</p>
+    </div>
+  );
+};

@@ -30,6 +30,19 @@ export const App = () => {
     setleaseTerm(e);
   };
 
+  const handleTotal = () => {
+    const result = downPayment + leaseTerm * handleMonthly();
+    return Math.round(result);
+  };
+
+  const handleMonthly = () => {
+    const result =
+      (carPrice - downPayment) *
+      ((0.035 * Math.pow(1 + 0.035, leaseTerm)) /
+        (Math.pow(1 + 0.035, leaseTerm) - 1));
+    return Math.round(result);
+  };
+
   // Helpers
   const calculateDPMin = () => {
     const result = Math.round(carPrice * 0.1);
@@ -58,7 +71,7 @@ export const App = () => {
           <Input
             value={carPrice}
             onChange={handleCarPrice}
-            label='Car cost'
+            label='Cost of the car'
             min={1000000}
             max={6000000}
             step={5000}
@@ -84,8 +97,11 @@ export const App = () => {
           />
         </div>
         <div className='results-box'>
-          <Results />
-          <Results />
+          <Results
+            label='Amount of the leasing agreement'
+            result={handleTotal()}
+          />
+          <Results label='Monthly payment' result={handleMonthly()} />
           <Button />
         </div>
       </main>
