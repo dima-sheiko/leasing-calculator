@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'Gilroy';
-  src: url('../assets/fonts/Gilroy/Gilroy-Thin.eot');
-  src: url('../assets/fonts/Gilroy/Gilroy-Thin.woff2') format('woff2'),
-    url('../assets/fonts/Gilroy/Gilroy-Thin.woff') format('woff'),
-    url('../assets/fonts/Gilroy/Gilroy-Thin.ttf') format('truetype');
+  src: url('../assets/fonts/Gilroy/Gilroy-Regular.eot');
+  src: url('../assets/fonts/Gilroy/Gilroy-Regular.woff2') format('woff2'),
+    url('../assets/fonts/Gilroy/Gilroy-Regular.woff') format('woff'),
+    url('../assets/fonts/Gilroy/Gilroy-Regular.ttf') format('truetype');
 }
 
 @font-face {
