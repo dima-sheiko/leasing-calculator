@@ -1,7 +1,15 @@
-import React from 'react'
+import styles from './Button.module.css';
 
-export const Button = () => {
+// Types
+type ButtonProps = {
+  text: string;
+};
+
+// Logic
+export const Button = ({ text }: ButtonProps) => {
   return (
-    <div>Button</div>
-  )
-}
+    <button className={styles.button} type='submit'>
+      {text}
+    </button>
+  );
+};

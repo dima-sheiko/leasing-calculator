@@ -1,0 +1,26 @@
+.button {
+  width: 426px;
+  height: 68px;
+  color: white;
+  background: #ff9514;
+  border: none;
+  border-radius: 40px;
+  font-size: 30px;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* Pseudo */
+
+.button:hover {
+  background: #111111;
+}
+
+.button:active {
+  background: #575757;
+}
+
+.button:disabled {
+  background: rgba(255, 149, 20, 0.4);
+}
