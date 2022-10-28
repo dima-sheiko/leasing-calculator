@@ -1,4 +1,5 @@
 import { ChangeEvent } from 'react';
+import styles from './Input.module.css';
 
 // Types
 type InputProps = {
@@ -8,7 +9,7 @@ type InputProps = {
   min: number;
   max: number;
   step: number;
-  badge: string | number;
+  badge: string;
 };
 
 // Logic
@@ -37,16 +38,23 @@ export const Input = ({
   };
 
   return (
-    <div>
-      <span>{label}</span>
+    <div className={styles.wrapper}>
+      <span className={styles.label}>{label}</span>
       <input
+        className={styles.input}
         value={value}
         onChange={handleInputChange}
         onBlur={handleBlur}
-        type='text'
+        type='number'
         name='price input'
       />
+      <div
+        className={badge.includes('%') ? styles.badge_percent : styles.badge}
+      >
+        {badge}
+      </div>
       <input
+        className={styles.slider}
         value={value}
         onChange={handleInputChange}
         min={min}
@@ -55,7 +63,6 @@ export const Input = ({
         type='range'
         name='price slider'
       />
-      {badge}
     </div>
   );
 };

@@ -1,0 +1,80 @@
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+}
+
+.label {
+  font-family: 'Gilroy';
+  font-size: 16px;
+  color: #575757;
+  font-weight: 400;
+}
+
+.input {
+  padding: 16px 24px;
+  background: #f3f3f4;
+  border: none;
+  border-radius: 16px;
+  outline: none;
+  font-size: 30px;
+  color: #575757;
+  font-family: inherit;
+}
+
+.input::-webkit-outer-spin-button,
+.input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.badge {
+  position: absolute;
+  right: 24px;
+  top: 60px;
+  color: #575757;
+  font-family: inherit;
+  font-size: 30px;
+}
+
+.badge_percent {
+  position: absolute;
+  right: 7px;
+  top: 49px;
+  color: #575757;
+  font-size: 20px;
+  background: #ebebec;
+  border-radius: 16px;
+  padding: 15px 17px;
+}
+
+/* Slider */
+
+.slider {
+  position: absolute;
+  top: 108px;
+  width: 90%;
+  align-self: center;
+}
+
+input[type='range'] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+input[type='range']::-webkit-slider-runnable-track {
+  background: #ff9514;
+  height: 2px;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ff9514;
+  cursor: pointer;
+  margin-top: -8px;
+}
