@@ -1,3 +1,5 @@
+import styles from './Results.module.css';
+
 // Types
 type ResultsProps = {
   label: string;
@@ -8,8 +10,8 @@ type ResultsProps = {
 export const Results = ({ label, result }: ResultsProps) => {
   return (
     <div>
-      <p>{label}</p>
-      <p>{result}</p>
+      <p className={styles.label}>{label}</p>
+      <p className={styles.result}>{result.toLocaleString('USD')} $</p>
     </div>
   );
 };

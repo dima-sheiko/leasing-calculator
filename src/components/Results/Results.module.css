@@ -1,0 +1,11 @@
+.label {
+  font-family: 'Gilroy';
+  font-size: 16px;
+  color: #575757;
+  font-weight: 400;
+}
+
+.result {
+  font-size: 54px;
+  font-family: inherit;
+}
