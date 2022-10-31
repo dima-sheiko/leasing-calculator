@@ -42,3 +42,29 @@ body {
   margin-top: 22px;
   align-items: center;
 }
+
+/* Media Queries */
+
+@media (max-width: 1120px) {
+  .container {
+    padding: 0 36px;
+  }
+
+  .inputs-box {
+    grid-template-columns: 1fr;
+  }
+  
+  .results-box {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  .results-box {
+    grid-template-columns: 1fr;
+  }
+}

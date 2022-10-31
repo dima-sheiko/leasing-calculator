@@ -9,3 +9,13 @@
   font-size: 54px;
   font-family: inherit;
 }
+
+@media (max-width: 320px) {
+  .label {
+    font-size: 14px;
+  }
+  
+  .result {
+    font-size: 22px;
+  }
+}

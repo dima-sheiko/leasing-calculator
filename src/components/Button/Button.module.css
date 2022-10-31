@@ -29,7 +29,13 @@
   background: rgba(255, 149, 20, 0.4);
 }
 
-/* Media */
+/* Media Queries */
+
+@media (max-width: 768px) {
+  .button {
+    margin-bottom: 32px;
+  }
+}
 
 @media (max-width: 320px) {
   .button {
