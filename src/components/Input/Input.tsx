@@ -1,8 +1,8 @@
-import { ChangeEvent } from 'react';
+import { ChangeEvent, useState, useEffect } from 'react';
 import styles from './Input.module.css';
 
 // Types
-type InputProps = {
+type Input = {
   value: number;
   onChange: (e: number) => void;
   label: string;
@@ -21,29 +21,47 @@ export const Input = ({
   max,
   step,
   badge,
-}: InputProps) => {
+}: Input) => {
+  const [result, setResult] = useState(value);
+
+  // Effect
+  useEffect(() => {
+    setResult(value);
+  }, [value]);
+
   // Handlers
-  const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
+  const inputChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
+    const rawValue = e.target.value;
+    if (!rawValue) return;
+    const num = Number(rawValue);
+    setResult(num);
+  };
+
+  const rangeChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
+    setResult(Number(e.target.value));
     onChange(Number(e.target.value));
   };
 
   const handleBlur = () => {
-    if (value < min) {
-      onChange(min);
+    if (result < min) {
+      setResult(min);
+      return onChange(min);
     }
-
-    if (value > max) {
-      onChange(max);
+    if (result > max) {
+      setResult(max);
+      return onChange(max);
     }
+    return onChange(result);
   };
+
 
   return (
     <div className={styles.wrapper}>
       <span className={styles.label}>{label}</span>
       <input
         className={styles.input}
-        value={value}
-        onChange={handleInputChange}
+        value={result}
+        onChange={inputChangeHandler}
         onBlur={handleBlur}
         type='number'
         name='price input'
@@ -55,8 +73,8 @@ export const Input = ({
       </div>
       <input
         className={styles.slider}
-        value={value}
-        onChange={handleInputChange}
+        value={result}
+        onChange={rangeChangeHandler}
         min={min}
         max={max}
         step={step}
