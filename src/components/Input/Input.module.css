@@ -2,7 +2,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 23px;
 }
 
 .label {
@@ -21,6 +21,7 @@
   font-size: 30px;
   color: #575757;
   font-family: inherit;
+  width: 100%;
 }
 
 .input::-webkit-outer-spin-button,
