@@ -5,7 +5,7 @@
   align-items: center;
   min-height: 68px;
   color: white;
-  background: #ff9514;
+  background: var(--orange);
   border: none;
   border-radius: 40px;
   font-size: 1.875rem;
@@ -18,11 +18,11 @@
 /* Pseudo */
 
 .button:hover {
-  background: #111111;
+  background: var(--black);
 }
 
 .button:active {
-  background: #575757;
+  background: var(--grey);
 }
 
 .button:disabled {

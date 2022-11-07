@@ -1,11 +1,21 @@
 @import url('./fonts.css');
 
+:root {
+  --orange: #ff9514;
+  --grey: #575757;
+  --black: #111111;
+}
+
 *,
 *::before,
 *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
 }
 
 body {
@@ -53,7 +63,7 @@ body {
   .inputs-box {
     grid-template-columns: 1fr;
   }
-  
+
   .results-box {
     grid-template-columns: repeat(2, 1fr);
   }

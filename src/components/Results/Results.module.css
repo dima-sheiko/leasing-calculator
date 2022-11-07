@@ -1,7 +1,7 @@
 .label {
   font-family: 'Gilroy';
   font-size: 1rem;
-  color: #575757;
+  color: var(--grey);
   font-weight: 400;
 }
 

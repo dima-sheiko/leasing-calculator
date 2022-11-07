@@ -8,7 +8,7 @@
 .label {
   font-family: 'Gilroy';
   font-size: 1rem;
-  color: #575757;
+  color: var(--grey);
   font-weight: 400;
 }
 
@@ -19,7 +19,7 @@
   border-radius: 16px;
   outline: none;
   font-size: 1.875rem;
-  color: #575757;
+  color: var(--grey);
   font-family: inherit;
   width: 100%;
 }
@@ -34,7 +34,7 @@
   position: absolute;
   right: 24px;
   top: 60px;
-  color: #575757;
+  color: var(--grey);
   font-family: inherit;
   font-size: 1.875rem;
 }
@@ -43,7 +43,7 @@
   position: absolute;
   right: 7px;
   top: 49px;
-  color: #575757;
+  color: var(--grey);
   font-size: 1.25rem;
   background: #ebebec;
   border-radius: 16px;
@@ -66,7 +66,7 @@ input[type='range'] {
 }
 
 input[type='range']::-webkit-slider-runnable-track {
-  background: #ff9514;
+  background: var(--orange);
   height: 2px;
 }
 
@@ -75,7 +75,7 @@ input[type='range']::-webkit-slider-thumb {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: #ff9514;
+  background: var(--orange);
   cursor: pointer;
   margin-top: -8px;
 }
