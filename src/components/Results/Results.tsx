@@ -9,9 +9,9 @@ type ResultsProps = {
 // Logic
 export const Results = ({ label, result }: ResultsProps) => {
   return (
-    <div>
-      <p className={styles.label}>{label}</p>
+    <section>
+      <h3 className={styles.label}>{label}</h3>
       <p className={styles.result}>{result.toLocaleString('USD')} $</p>
-    </div>
+    </section>
   );
 };

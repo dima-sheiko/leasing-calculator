@@ -1,21 +1,21 @@
 .label {
   font-family: 'Gilroy';
-  font-size: 16px;
+  font-size: 1rem;
   color: #575757;
   font-weight: 400;
 }
 
 .result {
-  font-size: 54px;
+  font-size: 3.375rem;
   font-family: inherit;
 }
 
 @media (max-width: 320px) {
   .label {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
   
   .result {
-    font-size: 22px;
+    font-size: 1.375rem;
   }
 }
