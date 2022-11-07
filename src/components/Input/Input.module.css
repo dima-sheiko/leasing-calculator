@@ -7,7 +7,7 @@
 
 .label {
   font-family: 'Gilroy';
-  font-size: 16px;
+  font-size: 1rem;
   color: #575757;
   font-weight: 400;
 }
@@ -18,7 +18,7 @@
   border: none;
   border-radius: 16px;
   outline: none;
-  font-size: 30px;
+  font-size: 1.875rem;
   color: #575757;
   font-family: inherit;
   width: 100%;
@@ -36,7 +36,7 @@
   top: 60px;
   color: #575757;
   font-family: inherit;
-  font-size: 30px;
+  font-size: 1.875rem;
 }
 
 .badge_percent {
@@ -44,7 +44,7 @@
   right: 7px;
   top: 49px;
   color: #575757;
-  font-size: 20px;
+  font-size: 1.25rem;
   background: #ebebec;
   border-radius: 16px;
   padding: 15px 17px;
