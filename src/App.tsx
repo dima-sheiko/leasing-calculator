@@ -63,7 +63,7 @@ export const App = () => {
 
   return (
     <div className='wrapper'>
-      <main className='container'>
+      <div className='container'>
         <div className='header-box'>
           <Header>Calculate the cost of a car lease</Header>
         </div>
@@ -102,9 +102,13 @@ export const App = () => {
             result={handleTotal()}
           />
           <Results label='Monthly payment' result={handleMonthly()} />
-          <Button text='File A Request' />
+          <Button
+            text='File A Request'
+            type='submit'
+            onButtonClick={() => console.log('Request has been sent')}
+          />
         </div>
-      </main>
+      </div>
     </div>
   );
 };
