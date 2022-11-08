@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import { Button } from './components/Button/Button';
+import { MainLayout } from './layouts/MainLayout';
 import { Header } from './components/Header/Header';
 import { Input } from './components/Input/Input';
 import { Results } from './components/Results/Results';
-import { MainLayout } from './layouts/MainLayout';
+import { Button } from './components/Button/Button';
 import './styles/styles.css';
 
 // Logic
