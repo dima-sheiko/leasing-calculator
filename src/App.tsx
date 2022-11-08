@@ -3,6 +3,7 @@ import { Button } from './components/Button/Button';
 import { Header } from './components/Header/Header';
 import { Input } from './components/Input/Input';
 import { Results } from './components/Results/Results';
+import { MainLayout } from './layouts/MainLayout';
 import './styles/styles.css';
 
 // Logic
@@ -62,53 +63,51 @@ export const App = () => {
   };
 
   return (
-    <div className='wrapper'>
-      <div className='container'>
-        <div className='header-box'>
-          <Header>Calculate the cost of a car lease</Header>
-        </div>
-        <div className='inputs-box'>
-          <Input
-            value={carPrice}
-            onChange={handleCarPrice}
-            label='Cost of the car'
-            min={1000000}
-            max={6000000}
-            step={5000}
-            badge='$'
-          />
-          <Input
-            value={downPayment}
-            onChange={handleDownPayment}
-            label='Down payment'
-            min={calculateDPMin()}
-            max={calculateDPMax()}
-            step={500}
-            badge={`${calculateDPBadge()}%`}
-          />
-          <Input
-            value={leaseTerm}
-            onChange={handleLeaseTerm}
-            label='Lease term'
-            min={1}
-            max={60}
-            step={1}
-            badge={leaseTerm === 1 ? 'mo.' : 'mos.'}
-          />
-        </div>
-        <div className='results-box'>
-          <Results
-            label='Amount of the leasing agreement'
-            result={handleTotal()}
-          />
-          <Results label='Monthly payment' result={handleMonthly()} />
-          <Button
-            text='File A Request'
-            type='submit'
-            onButtonClick={() => console.log('Request has been sent')}
-          />
-        </div>
+    <MainLayout>
+      <div className='header-box'>
+        <Header>Calculate the cost of a car lease</Header>
       </div>
-    </div>
+      <div className='inputs-box'>
+        <Input
+          value={carPrice}
+          onChange={handleCarPrice}
+          label='Cost of the car'
+          min={1000000}
+          max={6000000}
+          step={5000}
+          badge='$'
+        />
+        <Input
+          value={downPayment}
+          onChange={handleDownPayment}
+          label='Down payment'
+          min={calculateDPMin()}
+          max={calculateDPMax()}
+          step={500}
+          badge={`${calculateDPBadge()}%`}
+        />
+        <Input
+          value={leaseTerm}
+          onChange={handleLeaseTerm}
+          label='Lease term'
+          min={1}
+          max={60}
+          step={1}
+          badge={leaseTerm === 1 ? 'mo.' : 'mos.'}
+        />
+      </div>
+      <div className='results-box'>
+        <Results
+          label='Amount of the leasing agreement'
+          result={handleTotal()}
+        />
+        <Results label='Monthly payment' result={handleMonthly()} />
+        <Button
+          text='File A Request'
+          type='submit'
+          onButtonClick={() => console.log('Request has been sent')}
+        />
+      </div>
+    </MainLayout>
   );
 };
