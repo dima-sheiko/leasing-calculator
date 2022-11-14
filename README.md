@@ -1,4 +1,4 @@
-# leasing-calculator-ts
+# Leasing Calculator
 
 Leasing calculator built with React and TypeScript.
 
